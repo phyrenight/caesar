@@ -24,6 +24,8 @@ def shift(lst):
                 num = ord(items)
                 if num == 122:
                     newSentence += chr(97)
+                elif num == 90:
+				    newSentence += chr(65)
                 else:
                     newSentence += (chr(num + 1))	 
             else:
