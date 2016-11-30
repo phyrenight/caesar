@@ -1,4 +1,3 @@
-
 def main():
     lst = []
     sentence = raw_input("Enter a sentence: ")
@@ -23,7 +22,7 @@ def shift(lst):
         for items in lst:
             if items.isalpha():
                 num = ord(items)
-                if num == 121:
+                if num == 122:
                     newSentence += chr(97)
                 else:
                     newSentence += (chr(num + 1))	 
@@ -32,13 +31,6 @@ def shift(lst):
         return newSentence
     else:
         return "No String entered."
-'''	
-def putIntoAString(list):
-    newSentence = ""
-    for items in list:
-        newSentence = newSentence + str(items)
-    print newSentence	
-'''	
 			 
 if __name__ == '__main__':
     main()
