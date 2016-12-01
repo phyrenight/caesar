@@ -5,11 +5,14 @@ def main():
         print"No string entered."
     else:
         lst = convertToList(sentence)
-        print(shift(lst))
-		
+        if type(lst) == 'string':
+            print lst
+        else:
+            print(shift(lst))
+
 def convertToList(sentence):
-    if sentence == None or "":
-	    print "No string entered."
+    if sentence == None or sentence == "":
+	    return "No string entered."
     else:
         lst = []
         for items in sentence:
@@ -33,6 +36,6 @@ def shift(lst):
         return newSentence
     else:
         return "No String entered."
-			 
+
 if __name__ == '__main__':
     main()
