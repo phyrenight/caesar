@@ -5,6 +5,7 @@ def main():
         print"No string entered."
     else:
         lst = convertToList(sentence)
+        print type(lst)
         if type(lst) == 'string':
             print lst
         else:
@@ -21,21 +22,24 @@ def convertToList(sentence):
 
 def shift(lst):
     newSentence = ""
-    if lst.__len__() > 0:
-        for items in lst:
-            if items.isalpha():
-                num = ord(items)
-                if num == 122:
-                    newSentence += chr(97)
-                elif num == 90:
-				    newSentence += chr(65)
+    print type(lst)
+    if type(lst) == 'list':
+        if len(lst) > 0:
+            for items in lst:
+                if items.isalpha():
+                    num = ord(items)
+                    if num == 122:
+                        newSentence += chr(97)
+                    elif num == 90:
+				        newSentence += chr(65)
+                    else:
+                        newSentence += (chr(num + 1))	 
                 else:
-                    newSentence += (chr(num + 1))	 
-            else:
-                newSentence += items
-        return newSentence
+                    newSentence += items
+            return newSentence
+        else:
+            return "No string entered."
     else:
-        return "No String entered."
-
+	    return "No string entered."
 if __name__ == '__main__':
     main()
