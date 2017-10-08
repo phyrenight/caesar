@@ -1,12 +1,12 @@
-# caesar
+# Caesar
 A cryptography program that uses a Caesar shift to encode messages.
 
 
-##software needed
+## Software needed
  Python 2.7
 
-##To download
-Either fork the project or download it
+## To download
+Either clone the project or download it
 
 ## To run program
 Navigate to the folder containing the code the type:
